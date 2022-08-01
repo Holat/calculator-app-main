@@ -1,0 +1,342 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* theme  1 */
+    /* background  */
+    --clr-main-background : hsl(222, 26%, 31%);
+    --clr-keypad-toggle-background : hsl(223, 31%, 20%);
+    --clr-screen-background : hsl(224, 36%, 15%);
+
+    /* button  */
+    --clr-button-background : hsl(30, 25%, 89%);
+    --clr-button-shadow: hsl(28, 16%, 65%);
+    --clr-btn-hover:hsl(30, 43%, 97%) ;
+
+    --clr-reset-del-background : hsl(225, 21%, 49%);
+    --clr-reset-del-shadow: hsl(224, 28%, 35%); 
+    --clr-reset-del-hover:  hsl(225, 39%, 66%);
+
+    --clr-equals-toggle-background :hsl(6, 63%, 50%);
+    --clr-equals-shadow : hsl(6, 70%, 34%);
+    --clr-equal-hover: hsl(6, 94%, 67%);
+
+    /* text */
+    --clr-dark-text: hsl(221, 14%, 31%);
+    --clr-light-color : white;
+}
+
+.theme2{
+     /* theme  2 */
+    /* background  */
+    --clr-main-background : hsl(0, 0%, 90%);
+    --clr-keypad-toggle-background : hsl(0, 5%, 81%);
+    --clr-screen-background : white;
+
+    /* button  */
+    --clr-button-background :  hsl(45, 7%, 89%);
+    --clr-button-shadow: hsl(35, 11%, 61%);
+    --clr-btn-hover: white ;
+
+    --clr-reset-del-background :hsl(185, 42%, 37%) ;
+    --clr-reset-del-shadow: hsl(185, 58%, 25%); 
+    --clr-reset-del-hover:  hsl(185, 28%, 55%);
+
+    --clr-equals-toggle-background : hsl(25, 98%, 40%);
+    --clr-equals-shadow : hsl(25, 99%, 27%) ;
+    --clr-equal-hover:  hsl(25, 93%, 63%);
+
+    /* text */
+    --clr-dark-text: hsl(60, 10%, 19%);
+    --clr-light-color :white;
+
+}
+.theme3{
+     /* theme  3 */
+    /* background  */
+    --clr-main-background : hsl(268, 75%, 9%);
+    --clr-keypad-toggle-background : hsl(268, 71%, 12%);
+    --clr-screen-background : hsl(268, 71%, 12%);
+
+    /* button  */
+    --clr-button-background : hsl(268, 47%, 21%);
+    --clr-button-shadow: hsl(290, 70%, 36%);
+    --clr-btn-hover: hsl(268, 58%, 40%) ;
+
+    --clr-reset-del-background : hsl(281, 89%, 26%);
+    --clr-reset-del-shadow:  hsl(285, 91%, 52%); 
+    --clr-reset-del-hover: hsl(281, 67%, 40%);
+
+    --clr-equals-toggle-background :  hsl(176, 100%, 44%);
+    --clr-equals-shadow : hsl(177, 92%, 70%);
+    --clr-equal-hover: hsl(176, 85%, 80%);
+
+    /* text */
+    --clr-dark-text: hsl(198, 20%, 13%);
+    --clr-light-color :white;
+    --clr-light-yellow: hsl(52, 100%, 62%);
+
+}
+
+
+
+
+body{
+    font-size: 32px;
+    font-family: 'League Spartan', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-main-background);
+    transition: background-color 0.5s ease;
+}
+
+.container{
+    width: 325px;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h3{
+    color: var(--clr-light-color);
+    font-size: 1.8rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+
+}
+
+.toggle-body{
+    flex-direction: column;
+}
+
+.toggle-container{
+    gap: 1rem;
+    color: var(--clr-light-color);
+}
+
+.toggle-container h4{
+    font-size: 0.8rem;
+    margin-top: 12px;
+}
+
+.toggle-label{
+   gap: 1rem;
+   margin-bottom: 0.3rem;
+}
+
+.toggle-label p{
+    font-size: 0.8rem;
+}
+
+.toggle{
+    width: 70px;
+    height: 25px;
+    background-color: var(--clr-keypad-toggle-background);
+    border-radius: 2rem;
+    padding-left: 4px;
+    padding-block: 2px;
+    position: relative;
+}
+
+.circle{
+    aspect-ratio: 1;
+    width: 17px;
+    background-color: var(--clr-equals-toggle-background);
+    border-radius: 2rem;
+    transition: all 0.4s  ease;
+    position: absolute;
+    cursor: pointer;
+}
+
+.circle:hover{
+    background-color: var(--clr-equal-hover);
+}
+
+.check-box{
+    display: flex;
+    gap: 3px;
+}
+
+.check{
+    aspect-ratio: 1;
+    width: 20px;
+    background-color: transparent;
+}
+
+.screen{
+    color: var(--clr-light-color);
+    background-color: var(--clr-screen-background);
+    width: 100%;
+    height: 84px;
+    text-align: right;
+    padding: 0 1.5rem ;
+    border-radius: 6px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    font-size: 2.5rem;
+    transition: background-color 0.5s ease;
+}
+
+.keypad{
+    width: 100%;
+    background-color: var(--clr-keypad-toggle-background);
+    margin-top: 24px;
+    border-radius: 6px;
+    padding: 20px;
+    display: grid;
+    gap: 12px;
+    height: 420px;
+    transition: background-color 0.5s ease;
+}
+
+.col{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+button{
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: 2rem;
+    color: var(--clr-dark-text);
+    border-radius: 0.6rem;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+}
+
+button:active{
+    border: none;
+}
+
+.btn{
+    background-color: var(--clr-button-background);
+    border-bottom: 4px inset var(--clr-button-shadow); 
+}
+
+
+.btn:hover{
+    background-color: var(--clr-btn-hover); 
+}
+
+.reset-del{
+    background-color: var(--clr-reset-del-background);
+    border-bottom: 4px inset var(--clr-reset-del-shadow); 
+    color: white;
+    font-size: 1.4rem;
+}
+
+
+.reset-del:hover{
+    background-color: var(--clr-reset-del-hover) ;
+}
+
+#equal{
+    background-color: var(--clr-equals-toggle-background);
+    border-bottom: 4px inset var(--clr-equals-shadow); 
+    color: var(--clr-light-color);
+    font-size: 1.4rem;
+}
+
+#equal:active{
+    border: none;
+}
+
+
+#equal:hover{
+    background-color:var(--clr-equal-hover);
+    
+}
+
+/* themes with diff styling */
+/* theme 2 */
+.theme2 .header h3{
+    color: var(--clr-dark-text);
+}
+
+.theme2 .screen{
+    color: var(--clr-dark-text);
+}
+
+.theme2 .toggle-container{
+    color: var(--clr-dark-text);
+}
+
+/* theme 3 */
+.theme3 .header h3{
+    color: var(--clr-light-yellow);
+}
+
+.theme3 .screen{
+    color: var(--clr-light-yellow);
+}
+
+.theme3 .btn{
+    color: var(--clr-light-yellow);
+}
+
+.theme3 .reset-del{
+    color: var(--clr-light-color);
+}
+
+.theme3 #equal{
+    color: var(--clr-dark-text);
+}
+
+.theme3 .toggle-container{
+    color: var(--clr-light-yellow);
+}
+@media screen and (min-width:1440px) {
+    .container{
+        width: 540px;
+    }
+    .col{
+        gap: 24px;
+    }
+    .keypad{
+        gap: 24px;
+        padding: 30px;
+    }
+    .screen{
+        height: 125px ;
+    }
+
+    .keypad{
+        height: 480px;
+    }
+    button{
+        font-size: 2.2rem;
+    }
+    .reset-del{
+        font-size: 1.6rem;
+    }
+    #equal{
+        font-size: 1.6rem;
+    }
+    .header h3{
+        font-size: 1rem;
+    }
+}
